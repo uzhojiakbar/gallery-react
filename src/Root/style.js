@@ -5,7 +5,10 @@ const MainRoot = styled.div`
 
   min-width: 100%;
   min-height: 100vh;
-  background-color: #222222;
+  background-color: ${({ toggle }) =>
+    toggle ? "var(--background-light)" : "var(--background-dark)"};
+
+  transition: all 0.7s ease-in-out;
 `;
 
 export { MainRoot };
